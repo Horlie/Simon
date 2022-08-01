@@ -74,7 +74,7 @@ function playSound(name) {
 }
 
 $(".btn").click(function (event) {
-    if (old_timestamp == null || old_timestamp + 500 < event.timeStamp) {
+    if (old_timestamp == null || old_timestamp + 200 < event.timeStamp) {
         const userChosenColor = event.target.id;
         userClickedPattern.push(userChosenColor);
         playSound(userChosenColor);
