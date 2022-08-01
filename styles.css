@@ -1,6 +1,14 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #011f3f;
+}
+
+#score{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin:  5%;
+  color: #FEF2BF;
+  display: none;
 }
 
 #level-title {
@@ -50,4 +58,32 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media only screen and (min-width: 1020px) {
+  #game-starter { display: none; }
+}
+
+#game-starter{
+  padding: 25px 30px;
+  border-radius: 20%;
+  background-color: #006664;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin: 5%;
+  color: white;
+  border: none;
+  box-shadow: 0 7px black;
+}
+
+#game-starter:hover {
+  background-color: #034157;
+}
+
+.btn-pressed{
+  transform: translateY(4px);
+}
+
+.disabledbutton {
+  pointer-events: none;
 }
