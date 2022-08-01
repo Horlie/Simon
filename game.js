@@ -31,7 +31,7 @@ function checkAnswer(currentLevel){
         wrong.play();
         $("body").addClass("game-over");
         window.setTimeout(function() {$("body").removeClass("game-over") }, 200);
-        if(is_mobile = true){
+        if(is_mobile === true){
         $("#level-title").text("Game Over, Press A Button to Restart");
         $("#score").css("display", "block").html("Your score is: "+(level <= 0 ? 0 : level-1));
         }
@@ -100,7 +100,7 @@ $( document ).ready(function() {
         is_mobile = true;       
     }
 
-    if (is_mobile == true) {
+    if (is_mobile === true) {
         $("#level-title").text("Press A Button to Start");
         $("#game-starter").click(function(){
             $("#score").css("display", "none");
