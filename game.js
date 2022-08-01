@@ -33,11 +33,11 @@ function checkAnswer(currentLevel){
         window.setTimeout(function() {$("body").removeClass("game-over") }, 200);
         if(is_mobile = true){
         $("#level-title").text("Game Over, Press A Button to Restart");
-        $("#score").css("display", "block").html("Your score is: "+level-1);
+        $("#score").css("display", "block").html("Your score is: "+(level-1));
         }
         else {
             $("#level-title").text("Game Over, Press Any Key to Restart");
-            $("#score").css("display", "block").html("Your score is: "+level-1);
+            $("#score").css("display", "block").html("Your score is: "+(level-1));
         }
         startOver();
     }
@@ -83,7 +83,7 @@ function playSound(name){
 }
 
 $(".btn").click(function (event){
-    if(old_timestamp == null || old_timestamp + 1000 < event.timeStamp)
+    if(old_timestamp == null || old_timestamp + 500 < event.timeStamp)
     {
         let userChosenColor = event.target.id;
         userClickedPattern.push(userChosenColor);
