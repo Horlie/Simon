@@ -6,7 +6,7 @@ body {
 #score {
   font-family: 'Press Start 2P', cursive;
   font-size: 1rem;
-  margin:  5%;
+  margin: 5%;
   color: #FEF2BF;
   display: none;
 }
@@ -14,7 +14,7 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin: 5%;
   color: #FEF2BF;
 }
 
@@ -61,7 +61,9 @@ body {
 }
 
 @media only screen and (min-width: 1020px) {
-  #game-starter { display: none; }
+  #game-starter {
+    display: none;
+  }
 }
 
 #game-starter {
