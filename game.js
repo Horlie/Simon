@@ -33,11 +33,11 @@ function checkAnswer(currentLevel){
         window.setTimeout(function() {$("body").removeClass("game-over") }, 200);
         if(is_mobile = true){
         $("#level-title").text("Game Over, Press A Button to Restart");
-        $("#score").css("display", "block").html("Your score is: "+(level-1));
+        $("#score").css("display", "block").html("Your score is: "+(level <= 0 ? 0 : level-1));
         }
         else {
             $("#level-title").text("Game Over, Press Any Key to Restart");
-            $("#score").css("display", "block").html("Your score is: "+(level-1));
+            $("#score").css("display", "block").html("Your score is: "+(level <= 0 ? 0 : level-1));
         }
         startOver();
     }
