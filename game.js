@@ -4,6 +4,16 @@ let userClickedPattern = [];
 let level = 0;
 let is_mobile = false;
 let old_timestamp = null;
+const colorsAudio = {};
+colorsAudio.red = new Audio("sounds/red.mp3");
+colorsAudio.red.volume = 0.6;
+colorsAudio.blue = new Audio("sounds/blue.mp3");
+colorsAudio.blue.volume = 0.6;
+colorsAudio.green = new Audio("sounds/green.mp3");
+colorsAudio.green.volume = 0.6;
+colorsAudio.yellow = new Audio("sounds/yellow.mp3");
+colorsAudio.yellow.volume = 0.6;
+const wrong = new Audio("sounds/wrong.mp3");
 
 function nextSequence() {
     const randomChosenColor = buttonColors[Math.floor(Math.random() * 4)];
@@ -33,7 +43,6 @@ function checkAnswer(currentLevel) {
             userClickedPattern = [];
         }
     } else {
-        const wrong = new Audio("sounds/wrong.mp3");
         wrong.play();
         $("body").addClass("game-over");
         setTimeout(() => {
@@ -61,33 +70,7 @@ function startOver() {
 }
 
 function playSound(name) {
-    switch (name) {
-        case "red":
-            const red = new Audio("sounds/red.mp3");
-            red.volume = 0.6;
-            red.play();
-            break;
-        case "blue":
-            const blue = new Audio("sounds/blue.mp3");
-            blue.volume = 0.6;
-            blue.play();
-            break;
-        case "green":
-            const green = new Audio("sounds/green.mp3");
-            green.volume = 0.6;
-            green.play();
-            break;
-        case "yellow":
-            const yellow = new Audio("sounds/yellow.mp3");
-            yellow.volume = 0.6;
-            yellow.play();
-            break;
-        default:
-            const audio = new Audio("sounds/wrong.mp3");
-            audio.volume = 0.6;
-            audio.play();
-            break;
-    }
+    colorsAudio[name].play();
 }
 
 $(".btn").click(function (event) {
